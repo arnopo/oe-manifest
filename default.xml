@@ -3,6 +3,7 @@
   <remote fetch="https://github.com" name="github"/>
   <remote fetch="http://git.openembedded.org" name="oe"/>
   <remote fetch="https://github.com/STMicroelectronics" name="OpenSTLinux"/>
+  <remote fetch="https://git.yoctoproject.org/git/" name="yocto"/>
   
   <default remote="OpenSTLinux"/>
   
@@ -14,4 +15,6 @@
   <project name="meta-st-stm32mp-addons" path="layers/meta-st/meta-st-stm32mp-addons" revision="81065195a63e98be8f423ab422960e9d7896f4d5"/>
   <project name="meta-st-scripts" path="layers/meta-st/scripts" revision="d2ba39bc40952ff6eb06d2b0e496910a74209660"/>
   <project name="openembedded-core" path="layers/openembedded-core" remote="oe" revision="72431ee8de5e3a53d259cebf420a7713ac9e1f14"/>
+  <project name="poky" path="layers/poky" remote="yocto" revision="08acba82d160815549a3c237b8c4850f96534da6"/>
+  <project name="meta-zephyr" path="layers/meta-zephyr" remote="yocto" revision="b2365dddc6f2ad44a3a5be677c514d584d3f4161"/>
 </manifest>
