@@ -4,7 +4,7 @@
   <remote fetch="http://git.openembedded.org" name="oe"/>
   <remote fetch="https://github.com/STMicroelectronics" name="OpenSTLinux"/>
   <remote fetch="https://git.yoctoproject.org/git/" name="yocto"/>
-  
+  <remote fetch="https://github.com/arnopo/" name="arnopo"/>
   <default remote="OpenSTLinux"/>
   
   <project name="bitbake" path="layers/openembedded-core/bitbake" remote="oe" revision="a394eeec6aeb98c6395cb5da2036ce936bdaa0a0"/>
@@ -16,5 +16,5 @@
   <project name="meta-st-scripts" path="layers/meta-st/scripts" revision="d2ba39bc40952ff6eb06d2b0e496910a74209660"/>
   <project name="openembedded-core" path="layers/openembedded-core" remote="oe" revision="72431ee8de5e3a53d259cebf420a7713ac9e1f14"/>
   <project name="poky" path="layers/poky" remote="yocto" revision="08acba82d160815549a3c237b8c4850f96534da6"/>
-  <project name="meta-zephyr" path="layers/meta-zephyr" remote="yocto" revision="b2365dddc6f2ad44a3a5be677c514d584d3f4161"/>
+  <project name="meta-zephyr" path="layers/meta-zephyr" remote="arnopo" revision="34a328a51de15123c8ece91fe67c86bd4d1d6ef1"/>
 </manifest>
