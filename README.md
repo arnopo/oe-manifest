@@ -11,6 +11,10 @@ See the wiki user guide for more information: http://wiki.st.com/stm32mpu/index.
     * [meta-zephyr](https://github.com/arnopo/meta-zephyr)
     * [meta-st-stm32mp-addons](https://github.com/arnopo/meta-st-stm32mp-addons)
 
+## Hardware supported
+*  stm32mp157C-DK2 board
+*  stm32mp157F-DK2 Board
+
 # How to build demos:
 ## prerequisite:
 The installation relies on the repo command. In case the Repo tool (a Google-built repository management tool that runs on top of git) is not yet installed and configured on the host PC, refer to the [PC prerequisites article](https://wiki.st.com/stm32mpu/wiki/PC_prerequisites).
@@ -48,16 +52,18 @@ Note that:
 
 ### Flashing the image
 
-2 solutions:
+Two possibilities:
 
-* Populate the sdcard
+* Install and use the STM32CubeProgrammer tool
+Faster and more adapted for the stm32mp157F-DK2 board support
+See the wiki user guide for more information: https://wiki.st.com/stm32mpu/wiki/STM32MP1_Distribution_Package#Flashing_the_built_image
+
+* Populate the sdcard using dd
+The wic image built for the stm32mp157C-DK2 but compatible with the stm32mp157F-DK2 board ( with Cortex-A7 frequency limited to 650 MHZ)
 ```
 cd tmp-glibc/deploy/images/stm32mp1-openamp
 sudo dd of=/dev/sdb iflag=fullblock oflag=direct conv=fsync status=progress if=st-image-core-openstlinux-weston-stm32mp1-openamp.wic
 ```
-* Use the STM32CubeProgrammer tool
-See the wiki user guide for more information: https://wiki.st.com/stm32mpu/wiki/STM32MP1_Distribution_Package#Flashing_the_built_image
-
 ## Building the Zephyr distribution
 
 ### Initializing the OpenEmbedded build environment
