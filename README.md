@@ -58,11 +58,19 @@ Two possibilities:
 Faster and more adapted for the stm32mp157F-DK2 board support
 See the wiki user guide for more information: https://wiki.st.com/stm32mpu/wiki/STM32MP1_Distribution_Package#Flashing_the_built_image
 
-* Populate the sdcard using dd
-The wic image built for the stm32mp157C-DK2 but compatible with the stm32mp157F-DK2 board ( with Cortex-A7 frequency limited to 650 MHZ)
+* Populate the sdcard using "dd" command line
+
+The wic image is built for the stm32mp157C-DK2 but is compatible with the stm32mp157F-DK2 board ( with Cortex-A7 frequency limited to 650 MHZ)
 ```
 cd tmp-glibc/deploy/images/stm32mp1-openamp
-sudo dd of=/dev/sdb iflag=fullblock oflag=direct conv=fsync status=progress if=st-image-core-openstlinux-weston-stm32mp1-openamp.wic
+sudo dd of=/dev/sdb iflag=fullblock oflag=direct conv=fsync status=progress bs=20M if=st-image-core-openstlinux-weston-stm32mp1-openamp.wic
+```
+* Populate the sdcard using "pv" command line
+
+Similar to "dd" command but with a progress bar.
+```
+cd tmp-glibc/deploy/images/stm32mp1-openamp
+sudo pv -r -p <st-image-core-openstlinux-weston-stm32mp1-openamp.wic >/dev/sdb
 ```
 ## Building the Zephyr distribution
 
@@ -90,9 +98,9 @@ Note that:
 - to build around 30 GB is needed
 - building the distribution can take 1 or 2 hours depending on performance of the PC.
 
-### Flashing the image
+### Install the Zephyr binary on the sdcard
 The Zephyr sample binary is available in the sub-folder ./tmp-newlib/deploy/images/stm32mp157c-dk2/
-It needs to be installed in the "rootfs" partition of the sdcard
+It needs to be installed on the "rootfs" partition of the sdcard
 
    ```
    $ sudo cp tmp-newlib/deploy/images/stm32mp157c-dk2/zephyr-openamp-rsc-table.elf <mount point>/rootfs/lib/firmware/
