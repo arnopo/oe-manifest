@@ -12,9 +12,9 @@
   <project name="meta-qt5/meta-qt5" path="layers/meta-qt5" remote="github" revision="0d8eb956015acdea7e77cd6672d08dce18061510"/>
   <project name="meta-st-openstlinux" path="layers/meta-st/meta-st-openstlinux" revision="d6947f5a1898744aa15a96b68e8945f4f553175e"/>
   <project name="meta-st-stm32mp" path="layers/meta-st/meta-st-stm32mp" revision="816fd629ab31700a5c08442b29f6906e95c31df0"/>
-  <project name="meta-st-stm32mp-addons"  remote="arnopo" path="layers/meta-st/meta-st-stm32mp-addons" revision="79ed0bf16c2e6ebf6394da5b66217538ca4106a6"/>
+  <project name="meta-st-stm32mp-addons"  remote="arnopo" path="layers/meta-st/meta-st-stm32mp-addons" revision="7d82bf762bba68e07f9a3f77d1778bb87ca19ec4"/>
   <project name="meta-st-scripts" path="layers/meta-st/scripts" revision="d2ba39bc40952ff6eb06d2b0e496910a74209660"/>
   <project name="openembedded-core" path="layers/openembedded-core" remote="oe" revision="72431ee8de5e3a53d259cebf420a7713ac9e1f14"/>
   <project name="poky" path="layers/poky" remote="yocto" revision="08acba82d160815549a3c237b8c4850f96534da6"/>
-  <project name="meta-zephyr" path="layers/meta-zephyr" remote="arnopo" revision="34a328a51de15123c8ece91fe67c86bd4d1d6ef1"/>
+  <project name="meta-zephyr" path="layers/meta-zephyr" remote="arnopo" revision="3b79b109c17f986286e6aa27e3de1e0572f84394"/>
 </manifest>
